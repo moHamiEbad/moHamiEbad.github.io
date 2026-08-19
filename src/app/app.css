@@ -1,0 +1,16 @@
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-main {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding-bottom: 96px;
+}
+
+@media (max-width: 640px) {
+  .site-main {
+    width: min(100% - 28px, 1120px);
+    padding-bottom: 64px;
+  }
+}

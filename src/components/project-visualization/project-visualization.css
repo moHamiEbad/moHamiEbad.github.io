@@ -1,0 +1,63 @@
+.project-visualization {
+  margin: 38px 0 0;
+}
+
+.project-visualization__stage {
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 64% 26%, rgb(138 79 46 / 0.12), transparent 16rem),
+    var(--color-background);
+}
+
+.project-visualization svg {
+  width: 100%;
+  height: auto;
+}
+
+.project-visualization .cube path {
+  fill: rgb(255 253 249 / 0.18);
+  stroke: var(--color-muted);
+  stroke-width: 2.2;
+  vector-effect: non-scaling-stroke;
+}
+
+.project-visualization .cube--back path {
+  opacity: 0.42;
+}
+
+.project-visualization .candidate-line {
+  stroke: var(--color-accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.project-visualization .point-halo {
+  fill: var(--color-accent-soft);
+}
+
+.project-visualization .point {
+  fill: var(--color-accent-strong);
+}
+
+.project-visualization text {
+  fill: var(--color-text);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-visualization .line-label {
+  fill: var(--color-accent-strong);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.project-visualization figcaption {
+  margin-top: 11px;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
