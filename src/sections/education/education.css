@@ -1,0 +1,29 @@
+.education__item {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 40px;
+  padding: 28px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.education__item:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.education__years,
+.education__item p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.education__item h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 700px) {
+  .education__item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

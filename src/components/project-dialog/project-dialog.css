@@ -1,0 +1,110 @@
+.project-dialog {
+  width: min(980px, calc(100% - 32px));
+  max-height: min(88vh, 880px);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: 0 40px 100px rgb(31 33 31 / 0.22);
+}
+
+.project-dialog::backdrop {
+  background: rgb(31 33 31 / 0.42);
+  backdrop-filter: blur(5px);
+}
+
+.project-dialog__shell {
+  max-height: min(88vh, 880px);
+  overflow-y: auto;
+}
+
+.project-dialog__close {
+  position: sticky;
+  top: 18px;
+  z-index: 2;
+  width: fit-content;
+  margin: 18px 18px 0 auto;
+  padding: 9px 13px;
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  color: var(--color-muted);
+  font-weight: 650;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.project-dialog__close:hover {
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+.project-dialog__content {
+  padding: 16px 54px 58px;
+}
+
+.project-dialog__eyebrow {
+  margin: 0 0 10px;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-dialog h2 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.3rem, 7vw, 4.5rem);
+  letter-spacing: -0.055em;
+}
+
+.project-dialog__summary {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: var(--color-muted);
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.project-dialog__sections {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-dialog__sections section {
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+}
+
+.project-dialog__sections h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+
+.project-dialog__sections p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.72;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .project-dialog__content {
+    padding: 8px 22px 38px;
+  }
+
+  .project-dialog__sections {
+    grid-template-columns: 1fr;
+  }
+}
