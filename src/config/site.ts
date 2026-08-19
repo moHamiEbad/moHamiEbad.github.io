@@ -9,8 +9,7 @@ export const siteConfig = {
   websiteUrl: "https://mohamiebad.github.io/",
   githubUrl: "https://github.com/moHamiEbad",
 
-  // Change this once and every email link that uses the config will follow it.
-  email: "YOUR_EMAIL@example.com",
+  email: "hamiebad79@gmail.com",
 
   // Leave empty until cv.pdf exists. The hero hides the button automatically.
   cvUrl: "",
