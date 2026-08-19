@@ -16,7 +16,6 @@ export const siteConfig = {
 
   navigation: [
     { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Knowledge", href: "#knowledge" },
     { label: "Education", href: "#education" },

@@ -11,16 +11,6 @@ export interface Profile {
   links: Link[];
 }
 
-export interface Experience {
-  organization: string;
-  role: string;
-  start: string;
-  end: string;
-  location?: string;
-  description: string;
-  highlights: string[];
-}
-
 export type ProjectVisualization = "hypercube-line";
 
 export interface ProjectDetailSection {

@@ -1,7 +1,6 @@
 import { createNavigation } from "../components/navigation/navigation";
 import { createHeroSection } from "../sections/hero/hero";
 import { createAboutSection } from "../sections/about/about";
-import { createExperienceSection } from "../sections/experience/experience";
 import { createProjectsSection } from "../sections/projects/projects";
 import { createKnowledgeSection } from "../sections/knowledge/knowledge";
 import { createEducationSection } from "../sections/education/education";
@@ -19,7 +18,6 @@ export function createApp(): HTMLElement {
   main.append(
     createHeroSection(),
     createAboutSection(),
-    createExperienceSection(),
     createProjectsSection(),
     createKnowledgeSection(),
     createEducationSection(),
