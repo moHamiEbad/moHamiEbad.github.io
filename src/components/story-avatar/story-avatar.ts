@@ -41,9 +41,11 @@ export function createStoryAvatar(): StoryAvatarController {
     throw new Error("Could not create story avatar symbol.");
   }
 
+  const symbolElement: HTMLElement = symbol;
+
   function setState(state: AboutAvatarState, value: string): void {
     wrapper.dataset.state = state;
-    symbol.textContent = value;
+    symbolElement.textContent = value;
   }
 
   setState("overwhelmed", "…");
