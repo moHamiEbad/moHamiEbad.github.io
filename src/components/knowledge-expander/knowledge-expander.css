@@ -1,0 +1,119 @@
+.knowledge-expander {
+  margin-top: 28px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.knowledge-expander:hover {
+  border-color: var(--color-border-strong);
+}
+
+.knowledge-expander[open] {
+  background: var(--color-surface);
+}
+
+.knowledge-expander__summary {
+  min-height: 74px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.knowledge-expander__summary::-webkit-details-marker {
+  display: none;
+}
+
+.knowledge-expander__summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -4px;
+  border-radius: var(--radius-md);
+}
+
+.knowledge-expander__title {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 720;
+  letter-spacing: -0.015em;
+}
+
+.knowledge-expander__icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  transition:
+    transform 220ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.knowledge-expander__icon::before,
+.knowledge-expander__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 1.5px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  transform: translate(-50%, -50%);
+}
+
+.knowledge-expander__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: opacity 180ms ease;
+}
+
+.knowledge-expander__summary:hover .knowledge-expander__icon {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.knowledge-expander[open] .knowledge-expander__icon {
+  transform: rotate(180deg);
+}
+
+.knowledge-expander[open] .knowledge-expander__icon::after {
+  opacity: 0;
+}
+
+.knowledge-expander__body {
+  padding: 0 22px 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.knowledge-expander__body > .jl {
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .knowledge-expander__summary {
+    min-height: 66px;
+    padding: 0 18px;
+  }
+
+  .knowledge-expander__body {
+    padding: 0 14px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knowledge-expander,
+  .knowledge-expander__icon,
+  .knowledge-expander__icon::after {
+    transition: none;
+  }
+}

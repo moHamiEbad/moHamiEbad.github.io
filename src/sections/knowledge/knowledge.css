@@ -5,8 +5,8 @@
 }
 
 .knowledge-card {
-  max-width: 880px;
-  padding: 30px;
+  max-width: 1080px;
+  padding: 34px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: var(--color-surface);
@@ -30,29 +30,30 @@
 
 .knowledge-card h3 {
   margin: 0;
-  font-size: clamp(1.45rem, 3vw, 2rem);
-  letter-spacing: -0.03em;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
 }
 
 .knowledge-card__summary {
-  max-width: 720px;
-  margin: 14px 0 0;
+  max-width: 880px;
+  margin: 16px 0 0;
   color: var(--color-muted);
-  line-height: 1.75;
+  line-height: 1.78;
+  font-size: 1.02rem;
 }
 
 .knowledge-card__insight {
-  margin-top: 24px;
-  padding: 18px 20px;
-  border-left: 3px solid var(--color-accent);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  background: var(--color-accent-soft);
+  margin-top: 26px;
+  padding: 20px 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
 }
 
 .knowledge-card__insight span {
   display: block;
-  margin-bottom: 7px;
-  color: var(--color-accent-strong);
+  margin-bottom: 8px;
+  color: var(--color-accent);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -61,8 +62,8 @@
 
 .knowledge-card__insight p {
   margin: 0;
-  color: var(--color-accent-strong);
-  line-height: 1.65;
+  color: var(--color-text);
+  line-height: 1.72;
 }
 
 .knowledge-card__related {
@@ -71,4 +72,222 @@
   color: var(--color-text);
   font-weight: 700;
   text-decoration: none;
+}
+
+/* JL visualization */
+
+.jl-visual {
+  margin-top: 28px;
+  padding-top: 4px;
+}
+
+.jl-visual__intro {
+  max-width: 900px;
+  margin: 0 0 22px;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.jl-visual__pipeline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.jl-visual__operator {
+  color: var(--color-accent);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.jl-block {
+  min-height: 250px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+}
+
+.jl-block__label {
+  margin-bottom: 8px;
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.jl-block__title {
+  margin-bottom: 18px;
+  color: var(--color-text);
+  font-size: 1.08rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.jl-block__meta {
+  margin: 18px 0 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+  font-size: 0.92rem;
+}
+
+.jl-bars {
+  height: 108px;
+  display: flex;
+  align-items: end;
+  gap: 6px;
+}
+
+.jl-bars span {
+  display: block;
+  width: 10px;
+  border-radius: 999px 999px 3px 3px;
+  background: linear-gradient(
+    to top,
+    var(--color-accent) 0%,
+    var(--color-accent-soft) 100%
+  );
+  opacity: 0.92;
+}
+
+.jl-bars--dense span:nth-child(1) { height: 34px; }
+.jl-bars--dense span:nth-child(2) { height: 68px; }
+.jl-bars--dense span:nth-child(3) { height: 52px; }
+.jl-bars--dense span:nth-child(4) { height: 86px; }
+.jl-bars--dense span:nth-child(5) { height: 47px; }
+.jl-bars--dense span:nth-child(6) { height: 76px; }
+.jl-bars--dense span:nth-child(7) { height: 63px; }
+.jl-bars--dense span:nth-child(8) { height: 95px; }
+.jl-bars--dense span:nth-child(9) { height: 58px; }
+.jl-bars--dense span:nth-child(10) { height: 81px; }
+.jl-bars--dense span:nth-child(11) { height: 43px; }
+.jl-bars--dense span:nth-child(12) { height: 71px; }
+.jl-bars--dense span:nth-child(13) { height: 55px; }
+.jl-bars--dense span:nth-child(14) { height: 88px; }
+
+.jl-bars--sparse span:nth-child(1) { height: 26px; }
+.jl-bars--sparse span:nth-child(2) { height: 42px; }
+.jl-bars--sparse span:nth-child(3) { height: 59px; }
+.jl-bars--sparse span:nth-child(4) { height: 37px; }
+.jl-bars--sparse span:nth-child(5) { height: 71px; }
+.jl-bars--sparse span:nth-child(6) { height: 48px; }
+.jl-bars--sparse span:nth-child(7) { height: 33px; }
+.jl-bars--sparse span:nth-child(8) { height: 63px; }
+
+.jl-matrix {
+  display: grid;
+  grid-template-columns: repeat(5, 16px);
+  gap: 8px;
+}
+
+.jl-matrix span {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-soft) 0%,
+    var(--color-accent) 100%
+  );
+  opacity: 0.95;
+}
+
+.jl-visual__facts {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.jl-fact {
+  padding: 18px 18px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+}
+
+.jl-fact span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.jl-fact strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+}
+
+.jl-fact p {
+  margin: 10px 0 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+  font-size: 0.92rem;
+}
+
+.jl-visual__guarantee {
+  margin-top: 18px;
+  padding: 22px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-accent-soft) 22%, var(--color-surface));
+}
+
+.jl-visual__guarantee-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.jl-visual__guarantee code {
+  display: block;
+  white-space: normal;
+  color: var(--color-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.jl-visual__guarantee p {
+  max-width: 860px;
+  margin: 12px 0 0;
+  color: var(--color-muted);
+  line-height: 1.72;
+}
+
+@media (max-width: 980px) {
+  .jl-visual__pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .jl-visual__operator {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .jl-visual__facts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .knowledge-card {
+    padding: 24px;
+  }
+
+  .jl-block {
+    min-height: auto;
+  }
 }
