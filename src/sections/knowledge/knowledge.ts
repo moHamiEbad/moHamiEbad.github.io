@@ -1,6 +1,7 @@
 import { knowledgeEntries } from "../../content/knowledge";
 import { createSectionHeading } from "../../components/section-heading/section-heading";
 import { createJlVisualization } from "../../components/jl-visualization/jl-visualization";
+import { createOptimizationVisualization } from "../../components/optimization-visualization/optimization-visualization";
 import { createKnowledgeExpander } from "../../components/knowledge-expander/knowledge-expander";
 import { createKnowledgeTakeaway } from "../../components/knowledge-takeaway/knowledge-takeaway";
 import type { KnowledgeEntry } from "../../types/cv";
@@ -49,18 +50,25 @@ function createKnowledgeCard(entry: KnowledgeEntry): HTMLElement {
   article.append(kind, title, summary);
 
   if (entry.visualization === "jl-projection") {
-    const expander = createKnowledgeExpander(
-      "A magical application of randomness",
-      createJlVisualization(),
+    article.append(
+      createKnowledgeExpander(
+        "A magical application of randomness",
+        createJlVisualization(),
+      ),
     );
+  }
 
-    article.append(expander);
+  if (entry.visualization === "optimization-hypercube") {
+    article.append(
+      createKnowledgeExpander(
+        "A project that changed how I approached the problem",
+        createOptimizationVisualization(),
+      ),
+    );
   }
 
   if (entry.takeaway) {
-    article.append(
-      createKnowledgeTakeaway(entry.takeaway),
-    );
+    article.append(createKnowledgeTakeaway(entry.takeaway));
   }
 
   if (entry.relatedHref && entry.relatedLabel) {
