@@ -11,7 +11,10 @@ export interface Profile {
   links: Link[];
 }
 
-export type ProjectVisualization = "hypercube-line";
+export type ProjectVisualization =
+  | "pca-pipeline"
+  | "transformer-pipeline"
+  | "download-manager-pipeline";
 
 export interface ProjectDetailSection {
   title: string;
@@ -29,6 +32,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  participation?: string;
   technologies: string[];
   links: Link[];
   detail: ProjectDetail;
@@ -43,10 +47,14 @@ export interface Education {
   details?: string[];
 }
 
+export interface SkillReference {
+  label: string;
+  href: string;
+}
+
 export interface Skill {
   label: string;
-  href?: string;
-  linkLabel?: string;
+  references?: SkillReference[];
 }
 
 export interface SkillGroup {
@@ -60,8 +68,8 @@ export interface KnowledgeEntry {
   title: string;
   summary: string;
   visualization?:
-  | "jl-projection"
-  | "optimization-hypercube";
+    | "jl-projection"
+    | "optimization-hypercube";
   takeaway?: string;
   relatedHref?: string;
   relatedLabel?: string;

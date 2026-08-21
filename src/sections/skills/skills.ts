@@ -11,7 +11,7 @@ export function createSkillsSection(): HTMLElement {
     createSectionHeading(
       "Skills",
       "Tools and areas I work with",
-      "When a skill has concrete evidence elsewhere on the site, it can point directly to the relevant project or knowledge entry.",
+      "Where possible, each skill points to a project or course that shows where I used or studied it.",
     ),
   );
 
@@ -29,23 +29,34 @@ export function createSkillsSection(): HTMLElement {
 
     for (const skill of group.items) {
       const item = document.createElement("li");
+      item.className = "skills__item";
 
-      if (skill.href) {
-        const anchor = document.createElement("a");
-        anchor.href = skill.href;
-        anchor.textContent = skill.label;
-        anchor.title = skill.linkLabel
-          ? `Related: ${skill.linkLabel}`
-          : "View related work";
+      const label = document.createElement("span");
+      label.className = "skills__label";
+      label.textContent = skill.label;
+      item.append(label);
 
-        const marker = document.createElement("span");
-        marker.setAttribute("aria-hidden", "true");
-        marker.textContent = "↗";
+      if (skill.references && skill.references.length > 0) {
+        const references = document.createElement("div");
+        references.className = "skills__references";
 
-        anchor.append(marker);
-        item.append(anchor);
-      } else {
-        item.textContent = skill.label;
+        for (const reference of skill.references) {
+          const anchor = document.createElement("a");
+          anchor.href = reference.href;
+          anchor.title = `Related: ${reference.label}`;
+
+          const referenceLabel = document.createElement("span");
+          referenceLabel.textContent = reference.label;
+
+          const marker = document.createElement("i");
+          marker.setAttribute("aria-hidden", "true");
+          marker.textContent = "↗";
+
+          anchor.append(referenceLabel, marker);
+          references.append(anchor);
+        }
+
+        item.append(references);
       }
 
       list.append(item);

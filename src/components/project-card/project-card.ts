@@ -15,6 +15,13 @@ export function createProjectCard(
   openButton.setAttribute("aria-label", `Open details for ${project.title}`);
   openButton.addEventListener("click", () => onOpen(project));
 
+  if (project.participation) {
+    const participation = document.createElement("span");
+    participation.className = "project-card__participation";
+    participation.textContent = project.participation;
+    openButton.append(participation);
+  }
+
   const headingRow = document.createElement("div");
   headingRow.className = "project-card__heading-row";
 

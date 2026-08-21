@@ -6,64 +6,143 @@ export const skillGroups: SkillGroup[] = [
     items: [
       {
         label: "TypeScript",
-        href: "#project-task-manager",
-        linkLabel: "Task Manager",
+        references: [
+          { label: "Task Manager", href: "#project-task-manager" },
+        ],
       },
       { label: "JavaScript" },
-      { label: "Python" },
+      {
+        label: "Python",
+        references: [
+          { label: "HBSIR PCA", href: "#project-hbsir-pca" },
+          {
+            label: "Sentiment Transformer",
+            href: "#project-financial-sentiment-transformer",
+          },
+        ],
+      },
+      {
+        label: "Go",
+        references: [
+          { label: "Download Manager", href: "#project-download-manager" },
+        ],
+      },
     ],
   },
+
   {
     title: "Backend",
     items: [
       {
         label: "Node.js",
-        href: "#project-task-manager",
-        linkLabel: "Task Manager",
+        references: [
+          { label: "Task Manager", href: "#project-task-manager" },
+        ],
       },
       {
         label: "Express",
-        href: "#project-task-manager",
-        linkLabel: "Task Manager",
+        references: [
+          { label: "Task Manager", href: "#project-task-manager" },
+        ],
       },
       {
         label: "MySQL",
-        href: "#project-task-manager",
-        linkLabel: "Task Manager",
+        references: [
+          { label: "Task Manager", href: "#project-task-manager" },
+        ],
       },
     ],
   },
+
+  {
+    title: "Data & ML",
+    items: [
+      {
+        label: "PCA",
+        references: [
+          { label: "HBSIR PCA", href: "#project-hbsir-pca" },
+        ],
+      },
+      {
+        label: "Streamlit",
+        references: [
+          { label: "HBSIR PCA", href: "#project-hbsir-pca" },
+        ],
+      },
+      {
+        label: "PyTorch",
+        references: [
+          {
+            label: "Sentiment Transformer",
+            href: "#project-financial-sentiment-transformer",
+          },
+        ],
+      },
+      {
+        label: "Transformers / NLP",
+        references: [
+          {
+            label: "Sentiment Transformer",
+            href: "#project-financial-sentiment-transformer",
+          },
+        ],
+      },
+    ],
+  },
+
   {
     title: "Engineering",
     items: [
       { label: "Git" },
       { label: "Docker" },
       { label: "Linux" },
-      { label: "REST APIs", href: "#project-task-manager", linkLabel: "Task Manager" },
+      {
+        label: "REST APIs",
+        references: [
+          { label: "Task Manager", href: "#project-task-manager" },
+        ],
+      },
+      {
+        label: "Concurrency",
+        references: [
+          { label: "Download Manager", href: "#project-download-manager" },
+        ],
+      },
     ],
   },
+
   {
-    title: "Technical interests",
+    title: "Technical areas",
     items: [
       {
         label: "Optimization",
-        href: "#project-virtual-warehouse",
-        linkLabel: "Virtual Warehouse",
+        references: [
+          {
+            label: "Optimization coursework",
+            href: "#knowledge-introduction-to-optimization",
+          },
+        ],
       },
       {
         label: "Machine Learning",
-        href: "#knowledge-high-dimensional-probability",
-        linkLabel: "High-Dimensional Probability",
+        references: [
+          {
+            label: "Sentiment Transformer",
+            href: "#project-financial-sentiment-transformer",
+          },
+        ],
       },
       {
-        label: "Algorithms",
-        href: "#project-hypercube-lines",
-        linkLabel: "Hypercube project",
+        label: "Data Analysis",
+        references: [
+          { label: "HBSIR PCA", href: "#project-hbsir-pca" },
+        ],
       },
       {
         label: "Software Architecture",
-        href: "#project-task-manager",
-        linkLabel: "Task Manager",
+        references: [
+          { label: "Task Manager", href: "#project-task-manager" },
+        ],
       },
     ],
   },

@@ -1,5 +1,5 @@
 .project-card {
-  min-height: 290px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--color-border);
@@ -36,6 +36,20 @@
   color: inherit;
   text-align: left;
   cursor: pointer;
+}
+
+.project-card__participation {
+  width: fit-content;
+  margin-bottom: 13px;
+  padding: 5px 9px;
+  border: 1px solid color-mix(in srgb, var(--color-green) 48%, transparent);
+  border-radius: 999px;
+  background: var(--color-green-soft);
+  color: var(--color-green);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .project-card__heading-row {

@@ -33,53 +33,99 @@ export const projects: Project[] = [
   },
 
   {
-    id: "virtual-warehouse",
-    title: "Virtual Warehouse Research",
+    id: "hbsir-pca",
+    title: "HBSIR PCA Explorer",
+    participation: "Participated",
     description:
-      "Research and prototyping around inventory optimization, canonical item mapping, and distributed industrial inventories.",
-    technologies: ["Optimization", "Entity Resolution", "Research", "TypeScript"],
-    links: [],
+      "A household-expenditure analysis project using PCA to explore relationships among spending variables, with a Streamlit interface that made the workflow accessible to the whole team.",
+    technologies: ["Python", "PCA", "Streamlit", "Data Analysis"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/moHamiEbad/hbsir-pca-app",
+      },
+    ],
     detail: {
-      eyebrow: "Research project",
+      eyebrow: "Team data-analysis project",
       summary:
-        "A multi-part research effort around sharing and coordinating industrial inventories without treating each local warehouse as an isolated system.",
+        "A project I participated in around Iran's Household Budget Survey data. The interesting part was not merely running PCA: it was going from an enormous dataset with no obvious question, to an analysis based on PCA loadings, and then to a Streamlit workflow that teammates could explore without working directly in Python.",
+      visualization: "pca-pipeline",
       sections: [
         {
-          title: "Research threads",
+          title: "The analysis",
           body:
-            "The work combines preventive inventory methodology, canonical mapping of inconsistent inventory descriptions, and privacy-aware mechanisms for sharing or transferring inventory across organizations.",
+            "The workflow can filter household survey data by year, geography, settlement type, and commodity classification; apply different preprocessing choices; and run weighted or unweighted PCA. The outputs include scores, loadings, explained variance, and 2D/3D biplots.",
         },
         {
-          title: "What can go here later",
+          title: "Why it matters to me",
           body:
-            "Interactive pipeline diagrams, mathematical models, selected formulas, presentation material, and concise explanations of the assumptions behind each research component.",
+            "This is the same project used in my About story because it captures the kind of work I enjoy: finding the question, learning unfamiliar mathematics when it becomes useful, and then finding a practical way to make the result usable by other people.",
         },
       ],
     },
   },
 
   {
-    id: "hypercube-lines",
-    title: "Lines in the Unit Hypercube",
+    id: "financial-sentiment-transformer",
+    title: "Financial Sentiment Transformer",
+    participation: "Participated",
     description:
-      "A small geometric research problem about choosing a line through a prescribed point inside the unit hypercube under an extremal length criterion.",
-    technologies: ["Geometry", "Linear Algebra", "Optimization", "Research"],
-    links: [],
+      "A team machine-learning project building a Transformer-based classifier from scratch in PyTorch for negative, neutral, and positive financial sentiment.",
+    technologies: ["Python", "PyTorch", "Transformers", "NLP"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/mbehrad1432-lgtm/financial-sentiment-transformer",
+      },
+    ],
     detail: {
-      eyebrow: "Mathematical project",
+      eyebrow: "Team machine-learning project",
       summary:
-        "This is an example of the kind of project that benefits from a web portfolio: the statement is abstract in one sentence, but becomes intuitive as soon as the geometry is visible.",
-      visualization: "hypercube-line",
+        "A machine-learning project I participated in that implements the Transformer encoder itself rather than using a pretrained encoder such as BERT. BERT is used only for tokenization; the classifier is trained for three-way financial sentiment.",
+      visualization: "transformer-pipeline",
       sections: [
         {
-          title: "The idea",
+          title: "Architecture",
           body:
-            "Start with a prescribed point inside a unit hypercube and consider lines passing through that point. The project studies how the direction of the line affects the portion that remains inside the cube, under an extremal criterion.",
+            "Tokenized sentences pass through trainable 300-dimensional embeddings initialized from GloVe, sinusoidal positional encoding, three Transformer encoder blocks with six attention heads, masked mean pooling, and finally an MLP classifier.",
         },
         {
-          title: "Why the website helps",
+          title: "Training and evaluation",
           body:
-            "Later this detail view can combine the exact mathematical statement, a derivation, numerical experiments, and an interactive high-dimensional interpretation instead of forcing the whole idea into two résumé lines.",
+            "The training setup includes label smoothing, weighted sampling for class imbalance, an embedding freeze-to-unfreeze schedule, validation-based checkpoint selection, and evaluation with accuracy, precision, recall, macro F1, weighted F1, and a confusion matrix.",
+        },
+      ],
+    },
+  },
+
+  {
+    id: "download-manager",
+    title: "Go Download Manager",
+    participation: "Participated",
+    description:
+      "A team-built terminal download manager in Go with multipart downloads, queues, bandwidth control, and a responsive TUI.",
+    technologies: ["Go", "Concurrency", "HTTP", "TUI"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/computer-technology-team/download-manager",
+      },
+    ],
+    detail: {
+      eyebrow: "Team Go project",
+      summary:
+        "A Go project I participated in that combines network I/O, concurrency, queue management, bandwidth control, and a terminal UI in one system.",
+      visualization: "download-manager-pipeline",
+      sections: [
+        {
+          title: "Concurrent downloading",
+          body:
+            "When a server supports HTTP range requests, a file can be divided into chunks and downloaded in parallel using goroutines. The chunks are written to the correct offsets and assembled into the final file.",
+        },
+        {
+          title: "System structure",
+          body:
+            "The project separates the terminal UI, queue manager, download engine, bandwidth limiter, and event system. Bubble Tea powers the TUI, while Go channels and asynchronous events help the components communicate without tightly coupling the interface to download execution.",
         },
       ],
     },

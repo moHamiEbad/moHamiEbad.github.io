@@ -1,6 +1,6 @@
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 14px;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .skills__group h3 {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   font-size: 1rem;
 }
 
@@ -20,43 +20,51 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 8px;
+  gap: 14px;
   list-style: none;
 }
 
-.skills__group li {
+.skills__item {
+  min-width: 0;
+}
+
+.skills__label {
+  display: block;
   color: var(--color-muted);
   font-size: 0.9rem;
 }
 
-.skills__group a {
-  width: fit-content;
+.skills__references {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 9px;
+}
+
+.skills__references a {
   display: inline-flex;
   align-items: baseline;
-  gap: 5px;
-  color: var(--color-muted);
+  gap: 4px;
+  color: var(--color-green);
+  font-size: 0.68rem;
+  font-weight: 650;
+  line-height: 1.35;
   text-decoration: none;
 }
 
-.skills__group a span {
-  color: var(--color-green);
-  font-size: 0.72em;
-  opacity: 0.7;
-  transition: transform 150ms ease;
-}
-
-.skills__group a:hover {
+.skills__references a:hover {
   color: var(--color-text);
 }
 
-.skills__group a:hover span {
-  transform: translate(1px, -1px);
+.skills__references i {
+  font-size: 0.78em;
+  font-style: normal;
+  opacity: 0.75;
+  transition: transform 150ms ease;
 }
 
-@media (max-width: 900px) {
-  .skills__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.skills__references a:hover i {
+  transform: translate(1px, -1px);
 }
 
 @media (max-width: 520px) {
