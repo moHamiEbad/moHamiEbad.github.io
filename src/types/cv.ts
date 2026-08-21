@@ -59,9 +59,8 @@ export interface KnowledgeEntry {
   kind: string;
   title: string;
   summary: string;
-  insightLabel?: string;
-  insight?: string;
   visualization?: "jl-projection";
+  takeaway?: string;
   relatedHref?: string;
   relatedLabel?: string;
 }

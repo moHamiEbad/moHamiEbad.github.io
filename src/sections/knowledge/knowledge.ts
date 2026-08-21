@@ -2,6 +2,7 @@ import { knowledgeEntries } from "../../content/knowledge";
 import { createSectionHeading } from "../../components/section-heading/section-heading";
 import { createJlVisualization } from "../../components/jl-visualization/jl-visualization";
 import { createKnowledgeExpander } from "../../components/knowledge-expander/knowledge-expander";
+import { createKnowledgeTakeaway } from "../../components/knowledge-takeaway/knowledge-takeaway";
 import type { KnowledgeEntry } from "../../types/cv";
 import "./knowledge.css";
 
@@ -14,7 +15,7 @@ export function createKnowledgeSection(): HTMLElement {
     createSectionHeading(
       "Selected knowledge",
       "Advanced subjects worth mentioning.",
-      "Selected advanced coursework, each illustrated by one idea that makes the subject concrete.",
+      "Selected advanced coursework, each explored through one concrete idea and one broader lesson that stayed with me.",
     ),
   );
 
@@ -54,6 +55,12 @@ function createKnowledgeCard(entry: KnowledgeEntry): HTMLElement {
     );
 
     article.append(expander);
+  }
+
+  if (entry.takeaway) {
+    article.append(
+      createKnowledgeTakeaway(entry.takeaway),
+    );
   }
 
   if (entry.relatedHref && entry.relatedLabel) {
