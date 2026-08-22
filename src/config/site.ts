@@ -12,7 +12,7 @@ export const siteConfig = {
   email: "hamiebad79@gmail.com",
 
   // Leave empty until cv.pdf exists. The hero hides the button automatically.
-  cvUrl: "",
+  cvUrl: "/Hami-Ebadzadeh-CV.pdf",
 
   navigation: [
     { label: "About", href: "#about" },
