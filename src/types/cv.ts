@@ -41,9 +41,6 @@ export interface Project {
 export interface Education {
   institution: string;
   degree: string;
-  field?: string;
-  start: string;
-  end: string;
   details?: string[];
 }
 

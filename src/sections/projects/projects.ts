@@ -13,7 +13,6 @@ export function createProjectsSection(): HTMLElement {
     createSectionHeading(
       "Selected projects",
       "A summary first. Depth on demand.",
-      "The cards stay compact, while a click can open the mathematics, architecture, diagrams, experiments, or research details that do not belong on the main page.",
     ),
   );
 
