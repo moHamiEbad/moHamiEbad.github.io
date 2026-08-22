@@ -18,6 +18,10 @@ export const skillGroups: SkillGroup[] = [
             label: "Line–Hypercube Project",
             href: "#project-hypercube-line-intersection",
           },
+          {
+            label: "Block Transform Coding",
+            href: "#project-block-transform-coding",
+          },
           { label: "HBSIR PCA", href: "#project-hbsir-pca" },
           {
             label: "Sentiment Transformer",
@@ -104,6 +108,10 @@ export const skillGroups: SkillGroup[] = [
             label: "Line–Hypercube Project",
             href: "#project-hypercube-line-intersection",
           },
+          {
+            label: "Block Transform Coding",
+            href: "#project-block-transform-coding",
+          },
         ],
       },
       {
@@ -149,6 +157,15 @@ export const skillGroups: SkillGroup[] = [
         label: "Data Analysis",
         references: [
           { label: "HBSIR PCA", href: "#project-hbsir-pca" },
+        ],
+      },
+      {
+        label: "Image Processing",
+        references: [
+          {
+            label: "Block Transform Coding",
+            href: "#project-block-transform-coding",
+          },
         ],
       },
       {

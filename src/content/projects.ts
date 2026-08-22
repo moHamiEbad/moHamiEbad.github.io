@@ -71,6 +71,48 @@ export const projects: Project[] = [
       ],
     },
   },
+
+    {
+    id: "block-transform-coding",
+    title: "Block-Based Transform Coding",
+    participation: "Participated",
+    description:
+      "A collaborative academic presentation on transform-based image compression, covering DCT, KLT, coefficient selection, reconstruction error, and compression artifacts.",
+    technologies: ["Python", "Image Processing", "DCT / KLT", "LaTeX"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/moHamiEbad/block-transform-coding-presentation",
+      },
+      {
+        label: "Slides",
+        href: "https://github.com/moHamiEbad/block-transform-coding-presentation/blob/main/presentation/block-transform-coding-presentation.pdf",
+      },
+    ],
+    detail: {
+      eyebrow: "Collaborative academic presentation",
+      summary:
+        "A presentation I participated in on block-based transform coding for image compression. We studied how image blocks can be represented in different transform bases, how compression arises by retaining only selected coefficients, and why transforms such as the DCT are so useful in practical compression systems.",
+      sections: [
+        {
+          title: "What the presentation explores",
+          body:
+            "The presentation develops the basic mathematics of block transform coding and reconstruction error, then compares the DCT, KLT, DFT, and Walsh–Hadamard transform. It also discusses energy compaction, block size, blocking artifacts, bit allocation, zonal coding, and threshold coding.",
+        },
+        {
+          title: "Supporting experiments",
+          body:
+            "Two Python notebooks accompany the presentation. One compares the energy-compaction behavior of KLT, DCT, and DFT on image blocks, while the other compares fixed zonal coefficient selection with adaptive threshold-based selection.",
+        },
+        {
+          title: "Collaboration and attribution",
+          body:
+            "This was not an individual project. The original presentation lists Hami Ebadzadeh and Mahdi Cheraghzadeh as its authors. The linked repository preserves the final presentation, original LaTeX source, figures, and supporting computational experiments.",
+        },
+      ],
+    },
+  },
+  
   {
     id: "hbsir-pca",
     title: "HBSIR PCA Explorer",
