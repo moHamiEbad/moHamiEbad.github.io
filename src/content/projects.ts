@@ -112,7 +112,62 @@ export const projects: Project[] = [
       ],
     },
   },
-  
+
+  {
+    id: "lipschitz-continuum-bandits",
+    title: "Continuous Lipschitz Bandits",
+    participation: "Participated",
+    description:
+      "A collaborative High-Dimensional Probability project studying regret in continuous multi-armed bandits by combining Lipschitz structure, ε-nets, and UCB1.",
+    technologies: [
+      "Probability",
+      "Multi-Armed Bandits",
+      "Regret Analysis",
+      "LaTeX",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/moHamiEbad/lipschitz-continuum-bandits",
+      },
+      {
+        label: "Report",
+        href: "https://github.com/moHamiEbad/lipschitz-continuum-bandits/blob/main/report/lipschitz-continuum-bandits-report.pdf",
+      },
+      {
+        label: "Slides",
+        href: "https://github.com/moHamiEbad/lipschitz-continuum-bandits/blob/main/presentation/lipschitz-continuum-bandits-presentation.pdf",
+      },
+    ],
+    detail: {
+      eyebrow: "Collaborative High-Dimensional Probability project",
+      summary:
+        "A course project I participated in on extending multi-armed bandit ideas from a finite set of actions to a continuous space. Assuming the unknown reward function is Lipschitz, we studied whether the geometry of the action space could be used to obtain a meaningful regret bound.",
+      sections: [
+        {
+          title: "From infinitely many arms to finitely many",
+          body:
+            "The main approach replaces the continuous action space with a finite ε-net. Lipschitz continuity controls how much reward can be lost by approximating the true optimum with a nearby point in that net, while UCB1 handles exploration and exploitation over the resulting finite set of candidate actions.",
+        },
+        {
+          title: "Balancing approximation and learning",
+          body:
+            "Making the ε-net finer improves the approximation of the continuous optimum, but also creates more arms for the bandit algorithm to learn. Balancing these two sources of regret leads to a sublinear bound whose dependence on the dimension makes the cost of working in high-dimensional spaces explicit.",
+        },
+        {
+          title: "A second route that did not work",
+          body:
+            "We also explored whether bounds on the supremum of a Lipschitz sub-Gaussian process could control the regret more directly. The natural construction ran into a structural problem: centering the process removed the dependence on the action variable that the supremum argument needed. We kept this unsuccessful direction in the report because understanding why it failed was part of the project.",
+        },
+        {
+          title: "Collaboration and attribution",
+          body:
+            "This was not an individual project. The original report and presentation list Hami Ebadzadeh Semnani and Mehdi Darabi as the authors. The linked repository preserves both final artifacts together with their original LaTeX sources.",
+        },
+      ],
+    },
+  },
+
   {
     id: "hbsir-pca",
     title: "HBSIR PCA Explorer",

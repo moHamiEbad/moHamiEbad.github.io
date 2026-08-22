@@ -109,6 +109,10 @@ export const skillGroups: SkillGroup[] = [
             href: "#project-hypercube-line-intersection",
           },
           {
+            label: "Lipschitz Bandits",
+            href: "#project-lipschitz-continuum-bandits",
+          },
+          {
             label: "Block Transform Coding",
             href: "#project-block-transform-coding",
           },
@@ -157,6 +161,19 @@ export const skillGroups: SkillGroup[] = [
         label: "Data Analysis",
         references: [
           { label: "HBSIR PCA", href: "#project-hbsir-pca" },
+        ],
+      },
+      {
+        label: "Probability",
+        references: [
+          {
+            label: "Lipschitz Bandits",
+            href: "#project-lipschitz-continuum-bandits",
+          },
+          {
+            label: "HDP coursework",
+            href: "#knowledge-high-dimensional-probability",
+          },
         ],
       },
       {

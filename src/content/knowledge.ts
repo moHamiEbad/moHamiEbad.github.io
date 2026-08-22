@@ -10,6 +10,8 @@ export const knowledgeEntries: KnowledgeEntry[] = [
     visualization: "jl-projection",
     takeaway:
       "Some of the best ideas begin with an approach that initially seems like nobody would think to try.",
+    relatedHref: "#project-lipschitz-continuum-bandits",
+    relatedLabel: "See my Continuous Lipschitz Bandits project",
   },
   {
     id: "introduction-to-optimization",
