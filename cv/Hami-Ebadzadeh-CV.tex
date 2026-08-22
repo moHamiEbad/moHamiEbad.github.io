@@ -1,0 +1,142 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Page ----------
+\usepackage[
+  top=1.25cm,
+  bottom=1.25cm,
+  left=1.55cm,
+  right=1.55cm
+]{geometry}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ---------- Typography ----------
+\usepackage{libertinus}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Colors ----------
+\definecolor{cvText}{HTML}{202124}
+\definecolor{cvMuted}{HTML}{626262}
+\definecolor{cvAccent}{HTML}{98483D}
+\definecolor{cvRule}{HTML}{D8CBC7}
+\color{cvText}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=cvAccent,
+  linkcolor=cvAccent
+}
+
+% ---------- Spacing ----------
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=0.15em,
+  topsep=0.2em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ---------- Reusable commands ----------
+\newcommand{\cvsection}[1]{%
+  \vspace{0.72em}%
+  {\large\bfseries\color{cvAccent} #1}\par
+  \vspace{0.16em}%
+  {\color{cvRule}\hrule height 0.55pt}\par
+  \vspace{0.42em}%
+}
+
+\newcommand{\project}[4]{%
+  \textbf{\href{#2}{#1}}%
+  \hfill%
+  {\small\color{cvMuted} #3}\par
+  \vspace{0.12em}%
+  #4\par
+  \vspace{0.42em}%
+}
+
+\newcommand{\skillrow}[2]{%
+  \textbf{#1:} #2\par
+  \vspace{0.10em}%
+}
+
+\begin{document}
+
+% ============================================================
+% Header
+% ============================================================
+{\fontsize{22}{24}\selectfont\bfseries Hami Ebadzadeh}\par
+\vspace{0.12em}
+{\large\color{cvMuted} Computer Science \textperiodcentered{} Software Engineering \textperiodcentered{} Applied Research}\par
+\vspace{0.38em}
+
+{\small
+\href{mailto:hamiebad79@gmail.com}{hamiebad79@gmail.com}
+\quad\textperiodcentered\quad
+\href{https://github.com/moHamiEbad}{github.com/moHamiEbad}
+\quad\textperiodcentered\quad
+\href{https://mohamiebad.github.io}{mohamiebad.github.io}
+}\par
+
+% ============================================================
+% Profile
+% ============================================================
+\cvsection{Profile}
+Computer Science background focused on software engineering and applied research. I enjoy turning ambiguous technical problems into clear, implementable solutions, with particular interests in backend systems, machine learning, optimization, and mathematically grounded problem solving. Extended project details and technical write-ups are available at \href{https://mohamiebad.github.io}{mohamiebad.github.io}.
+
+% ============================================================
+% Education
+% ============================================================
+\cvsection{Education}
+\textbf{Sharif University of Technology}\par
+Bachelor of Computer Science
+
+% ============================================================
+% Selected Projects
+% ============================================================
+\cvsection{Selected Projects}
+
+\project
+  {Task Manager}
+  {https://github.com/moHamiEbad/task-manager}
+  {TypeScript \textperiodcentered{} Express \textperiodcentered{} MySQL}
+  {Backend project used to study TypeScript migration, domain modeling, Clean Architecture, authentication, persistence, repository boundaries, and REST API design.}
+
+\project
+  {HBSIR PCA Explorer \normalfont{\small\color{cvMuted}(Participated)}}
+  {https://github.com/moHamiEbad/hbsir-pca-app}
+  {Python \textperiodcentered{} PCA \textperiodcentered{} Streamlit}
+  {Participated in an interactive data-analysis project centered on preprocessing, weighted PCA, interpretation of principal components, and reproducible exploratory workflows.}
+
+\project
+  {Financial Sentiment Transformer \normalfont{\small\color{cvMuted}(Participated)}}
+  {https://github.com/mbehrad1432-lgtm/financial-sentiment-transformer}
+  {Python \textperiodcentered{} Machine Learning \textperiodcentered{} Transformers}
+  {Participated in a machine-learning project applying transformer-based methods to financial sentiment analysis.}
+
+\project
+  {Download Manager \normalfont{\small\color{cvMuted}(Participated)}}
+  {https://github.com/computer-technology-team/download-manager}
+  {Go}
+  {Participated in a small Go project focused on implementing a practical download-management application.}
+
+% ============================================================
+% Technical Skills
+% ============================================================
+\cvsection{Technical Skills}
+\skillrow{Languages}{TypeScript, JavaScript, Python, Go}
+\skillrow{Backend}{Node.js, Express, MySQL, REST APIs}
+\skillrow{Data / ML}{PCA, machine learning, transformers, Streamlit}
+\skillrow{Engineering}{Git, Docker, Linux, Clean Architecture, software architecture}
+
+% ============================================================
+% Selected Coursework
+% ============================================================
+\cvsection{Selected Coursework}
+High-Dimensional Probability \textperiodcentered{} Optimization \textperiodcentered{} Mathematical Analysis
+
+\end{document}
