@@ -14,6 +14,10 @@ export const skillGroups: SkillGroup[] = [
       {
         label: "Python",
         references: [
+          {
+            label: "Line–Hypercube Project",
+            href: "#project-hypercube-line-intersection",
+          },
           { label: "HBSIR PCA", href: "#project-hbsir-pca" },
           {
             label: "Sentiment Transformer",
@@ -29,7 +33,6 @@ export const skillGroups: SkillGroup[] = [
       },
     ],
   },
-
   {
     title: "Backend",
     items: [
@@ -53,7 +56,6 @@ export const skillGroups: SkillGroup[] = [
       },
     ],
   },
-
   {
     title: "Data & ML",
     items: [
@@ -89,13 +91,21 @@ export const skillGroups: SkillGroup[] = [
       },
     ],
   },
-
   {
     title: "Engineering",
     items: [
       { label: "Git" },
       { label: "Docker" },
       { label: "Linux" },
+      {
+        label: "LaTeX",
+        references: [
+          {
+            label: "Line–Hypercube Project",
+            href: "#project-hypercube-line-intersection",
+          },
+        ],
+      },
       {
         label: "REST APIs",
         references: [
@@ -110,13 +120,16 @@ export const skillGroups: SkillGroup[] = [
       },
     ],
   },
-
   {
     title: "Technical areas",
     items: [
       {
         label: "Optimization",
         references: [
+          {
+            label: "Line–Hypercube Project",
+            href: "#project-hypercube-line-intersection",
+          },
           {
             label: "Optimization coursework",
             href: "#knowledge-introduction-to-optimization",

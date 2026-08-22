@@ -31,7 +31,46 @@ export const projects: Project[] = [
       ],
     },
   },
-
+  {
+    id: "hypercube-line-intersection",
+    title: "Minimum Line–Hypercube Intersection",
+    participation: "Participated",
+    description:
+      "A collaborative optimization course project on choosing a line through an interior point of an n-dimensional hypercube so that its intersection with the hypercube is as short as possible.",
+    technologies: ["Python", "Optimization", "Computational Geometry", "LaTeX"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/moHamiEbad/hypercube-line-intersection-optimization",
+      },
+      {
+        label: "Report",
+        href: "https://github.com/moHamiEbad/hypercube-line-intersection-optimization/blob/main/report/hypercube-line-intersection-report.pdf",
+      },
+    ],
+    detail: {
+      eyebrow: "Collaborative optimization project",
+      summary:
+        "A course project I participated in for Introduction to Optimization at Sharif University of Technology. Starting from an interior point of the unit hypercube, we studied which line direction minimizes the length of the segment that remains inside the hypercube, then implemented and tested the resulting ideas numerically.",
+      sections: [
+        {
+          title: "The geometric idea",
+          body:
+            "Rather than treating every possible direction as an unstructured search, the project uses the hypercube's bounding hyperplanes. By considering pairs of boundary hyperplanes, relevant parts of the problem can be analyzed in the two-dimensional span of their normal vectors, turning some of the high-dimensional geometry into smaller candidate problems.",
+        },
+        {
+          title: "Experiments and extension",
+          body:
+            "The accompanying Python notebook explores two-, three-, and higher-dimensional cases, including points near the center, faces, and vertices. The report also considers how the same geometric viewpoint can be extended from hypercubes to more general convex polyhedra described by linear inequalities.",
+        },
+        {
+          title: "Collaboration and attribution",
+          body:
+            "This was not an individual project. The final report is co-authored by Hami Ebadzadeh Semnani and Soroush Shahi, and it acknowledges Kasra Khoshjo for consultation that contributed to an important idea. The linked repository preserves the final PDF, the original LaTeX source, and the implementation and results.",
+        },
+      ],
+    },
+  },
   {
     id: "hbsir-pca",
     title: "HBSIR PCA Explorer",
@@ -64,7 +103,6 @@ export const projects: Project[] = [
       ],
     },
   },
-
   {
     id: "financial-sentiment-transformer",
     title: "Financial Sentiment Transformer",
@@ -97,7 +135,6 @@ export const projects: Project[] = [
       ],
     },
   },
-
   {
     id: "download-manager",
     title: "Go Download Manager",
