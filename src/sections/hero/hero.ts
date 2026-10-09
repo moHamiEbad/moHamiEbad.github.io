@@ -32,7 +32,10 @@ export function createHeroSection(): HTMLElement {
     anchor.className =
       index === 0 ? "button button--primary" : "button button--secondary";
 
-    if (!link.href.startsWith("mailto:")) {
+    if (
+      !link.href.startsWith("mailto:") &&
+      !link.href.startsWith("tel:")
+    ) {
       anchor.target = "_blank";
       anchor.rel = "noreferrer";
     }

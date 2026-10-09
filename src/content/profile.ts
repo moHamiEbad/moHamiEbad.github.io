@@ -15,5 +15,9 @@ export const profile: Profile = {
       label: "Email",
       href: `mailto:${siteConfig.email}`,
     },
+    {
+      label: siteConfig.phone,
+      href: siteConfig.phoneHref,
+    },
   ],
 };
